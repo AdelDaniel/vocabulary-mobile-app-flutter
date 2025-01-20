@@ -17,4 +17,6 @@ abstract final class AppAssetPaths {
   static final List<String> themesImage = List.generate(6, _getThemeImage);
 
   /// Icons
+  static const trophyIcon = "assets/icons/trophy_icon.svg";
+  static const fireIcon = "assets/icons/fire_icon.svg";
 }
