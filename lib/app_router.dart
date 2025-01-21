@@ -21,15 +21,27 @@ class AppRouter {
     routes: <RouteBase>[
       GoRoute(
         path: getStartedScreenRouteName,
-        builder: (context, state) => const GetStartedScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const GetStartedScreen(),
+        ),
       ),
       GoRoute(
         path: homeScreenRouteName,
-        builder: (context, state) => const AppNavigationScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const HomeScreen(),
+        ),
       ),
       GoRoute(
         path: onboardingScreenRouteName,
-        builder: (context, state) => const OnboardingScreen(),
+        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
+          context: context,
+          state: state,
+          child: const OnboardingScreen(),
+        ),
       ),
     ],
   );
@@ -40,5 +52,22 @@ class AppRouter {
   ) {
     log(state.uri.toString(), name: "redirect");
     return null;
+  }
+
+  static CustomTransitionPage buildPageWithDefaultTransition<T>({
+    required BuildContext context,
+    required GoRouterState state,
+    required Widget child,
+  }) {
+    return CustomTransitionPage<T>(
+      transitionDuration: const Duration(milliseconds: 300),
+      child: child,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return FadeTransition(
+          opacity: CurveTween(curve: Curves.easeIn).animate(animation),
+          child: child,
+        );
+      },
+    );
   }
 }

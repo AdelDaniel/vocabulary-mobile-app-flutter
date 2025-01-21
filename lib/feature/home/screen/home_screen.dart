@@ -11,18 +11,18 @@ import 'package:voca_app/feature/home/widgets/word_page_widget.dart';
 import 'package:voca_app/feature/widgets/background/background_wrapper.dart';
 import 'package:voca_app/utils/lottie/swipe_lottie_widget.dart';
 
-class AppNavigationScreen extends StatefulWidget {
-  const AppNavigationScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   static void open({required BuildContext context, int? index}) {
     context.go(AppRouter.homeScreenRouteName);
   }
 
   @override
-  State<AppNavigationScreen> createState() => _AppNavigationScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _AppNavigationScreenState extends State<AppNavigationScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   final PageController _pageController = PageController(keepPage: true);
 
   final List<WordUiModel> _words = [
