@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import 'package:voca_app/app_router.dart';
 import 'package:voca_app/feature/home/models/word_ui_model.dart';
 import 'package:voca_app/feature/home/widgets/daily_challenge_hint.dart';
-import 'package:voca_app/feature/home/widgets/days_engagement_widget.dart';
 import 'package:voca_app/feature/home/widgets/paging_swipe_to_refresh_page_view_widget.dart';
 import 'package:voca_app/feature/home/widgets/upper_row_widgets.dart';
 import 'package:voca_app/feature/home/widgets/word_page_widget.dart';
