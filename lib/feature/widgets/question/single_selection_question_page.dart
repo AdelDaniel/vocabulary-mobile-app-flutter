@@ -43,7 +43,7 @@ class _SingleSelectionQuestionPageState
         children: [
           SkipButtonRow(
             showSkipButton: widget.showSkipButton,
-            onPressed: () => _onSelectOption(""),
+            onPressed: () => widget.onSelectOption(),
           ),
           const SizedBox(height: 15),
           QuestionTitleText(title: widget.title),
