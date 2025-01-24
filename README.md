@@ -23,3 +23,4 @@ The **Vocabulary** app will turn learning and retaining new words into a fun act
 
 Enjoy building your vocabulary with the **Vocabulary** app!
 
+https://play.google.com/store/apps/details?id=com.hrd.vocabulary&pcampaignid=web_share
